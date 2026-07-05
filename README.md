@@ -439,7 +439,7 @@ If you stacked methods, clean up in this order:
 /plugin list ecc@ecc
 ```
 
-**That's it!** You now have access to 67 agents, 277 skills, and 93 legacy command shims.
+**That's it!** You now have access to 67 agents, 281 skills, and 93 legacy command shims.
 
 ### Dashboard GUI
 
@@ -678,6 +678,10 @@ ECC/
 |   |-- autonomous-loops/           # Autonomous loop patterns: sequential pipelines, PR loops, DAG orchestration (NEW)
 |   |-- plankton-code-quality/      # Write-time code quality enforcement with Plankton hooks (NEW)
 |   |-- codehealth-mcp/             # Optional CodeScene Code Health MCP skill (opt-in; not enabled by default) (NEW)
+|   |-- api-contract-sync/          # Keep API contracts and documentation in sync with codebase (NEW)
+|   |-- design-consistency/         # Enforce brand identity and token-based design consistency (NEW)
+|   |-- frontend-design/            # UI design and high-quality frontend patterns (NEW)
+|   |-- torvalds-doctrine/          # Aggressive AI coding guidelines prioritizing data structure supremacy (NEW)
 |
 |-- commands/         # Maintained slash-entry compatibility; prefer skills/
 |   |-- plan.md             # /plan - Implementation planning
@@ -1435,7 +1439,7 @@ installed cache can resolve the manifest's skills, MCP config, and assets.
 
 Skills at `.agents/skills/` are auto-loaded by Codex:
 
-Canonical Anthropic skills such as `claude-api`, `frontend-design`, and `skill-creator` are intentionally not re-bundled here. Install those from [`anthropics/skills`](https://github.com/anthropics/skills) when you want the official versions.
+Canonical Anthropic skills such as `claude-api` and `skill-creator` are intentionally not re-bundled here. Install those from [`anthropics/skills`](https://github.com/anthropics/skills) when you want the official versions.
 
 | Skill | Description |
 |-------|-------------|
@@ -1472,6 +1476,10 @@ Canonical Anthropic skills such as `claude-api`, `frontend-design`, and `skill-c
 | verification-loop | Build, test, lint, typecheck, security |
 | video-editing | AI-assisted video editing workflows with FFmpeg and Remotion |
 | x-api | X/Twitter API integration for posting and analytics |
+| api-contract-sync | Keep API contracts and documentation in sync with codebase |
+| design-consistency | Enforce brand identity and token-based design consistency |
+| frontend-design | Create distinctive, production-grade frontend interfaces |
+| torvalds-doctrine | Aggressive AI coding guidelines prioritizing data structure supremacy |
 
 ### Key Limitation
 
@@ -1534,7 +1542,7 @@ The configuration is automatically detected from `.opencode/opencode.json`.
 |---------|---------------------|----------|--------|
 | Agents | PASS: 67 agents     | PASS: 12 agents | **Claude Code leads** |
 | Commands | PASS: 93 commands   | PASS: 35 commands | **Claude Code leads** |
-| Skills | PASS: 277 skills    | PASS: 37 skills | **Claude Code leads** |
+| Skills | PASS: 281 skills    | PASS: 37 skills | **Claude Code leads** |
 | Hooks | PASS: 8 event types | PASS: 11 events | **OpenCode has more!** |
 | Rules | PASS: 29 rules      | PASS: 13 instructions | **Claude Code leads** |
 | MCP Servers | PASS: 14 servers    | PASS: Full | **Full parity** |
@@ -1695,7 +1703,7 @@ ECC is the **first plugin to maximize every major AI coding tool**. Here's how e
 |---------|-----------------------|------------|-----------|----------|----------------|
 | **Agents** | 67                    | Shared (AGENTS.md) | Shared (AGENTS.md) | 12 | N/A |
 | **Commands** | 93                    | Shared | Instruction-based | 35 | 5 prompts |
-| **Skills** | 277                   | Shared | 10 (native format) | 37 | Via instructions |
+| **Skills** | 281                   | Shared | 10 (native format) | 37 | Via instructions |
 | **Hook Events** | 8 types               | 15 types | None yet | 11 types | None |
 | **Hook Scripts** | 20+ scripts           | 16 scripts (DRY adapter) | N/A | Plugin hooks | N/A |
 | **Rules** | 34 (common + lang)    | 34 (YAML frontmatter) | Instruction-based | 13 instructions | 1 always-on file |

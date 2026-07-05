@@ -1,0 +1,16 @@
+/*
+ * Design System — Single CSS Import
+ *
+ * Import this file once at the top of your project to get all design system
+ * layers. Uncomment layers as you build them.
+ */
+
+/* Layer 1: Design tokens */
+@import './tokens.css';
+
+/* Layer 2: Primitives (uncomment when created) */
+/* @import './ui_kits/primitives/primitives.css'; */
+
+/* Layer 3: Surface kits (uncomment as needed) */
+/* @import './ui_kits/app/app.css'; */
+/* @import './ui_kits/website/website.css'; */
